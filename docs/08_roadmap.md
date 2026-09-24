@@ -1,6 +1,6 @@
 # Future roadmap
 
-![Future roadmap](roadmap.png)
+![Future roadmap](future_roadmap.png)
 
 If we had more time beyond the datathon, here's what we'd tackle next, sorted from most realistic/near-term to longest-term:
 
