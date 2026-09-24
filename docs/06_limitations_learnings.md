@@ -13,7 +13,7 @@ These limitations come from the two-day datathon scope and the trial Snowflake p
 
 ## 2. Recommendations
 
-These are the next steps we would take to move from a datathon prototype to something a maintenance planner could trust. They focus on better data, local validation and involving the people who will use the ranking.
+These are the next steps we would take to move from a datathon prototype to something a maintenance planner could trust. We will focus on better data and local validation.
 
 - **Add condition data:** Bring in real inspection records, CCTV defect grades and maintenance logs, which is the original problem the use case describes.
 - **Test on Watercare's data:** Retrain and backtest on local pipes before anyone acts on the ranking.
