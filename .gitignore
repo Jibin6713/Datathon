@@ -44,6 +44,9 @@ venv/
 data/raw/
 *.geojson
 *.parquet
+*.csv
+# Note: .gitignore only affects files not yet tracked, and uploads made
+# through the GitHub website skip it entirely. Commit data via git, not web upload.
 
 # ---- OS / editor ----
 .DS_Store
