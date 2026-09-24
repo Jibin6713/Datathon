@@ -1,5 +1,5 @@
 
-## Limitations
+## 1. Limitations
 
 These limitations come from the two-day datathon scope and the trial Snowflake platform. They affect how far the results can be generalised, and each one is addressed in our recommendations.
 
@@ -11,7 +11,7 @@ These limitations come from the two-day datathon scope and the trial Snowflake p
 - **The pipe register is a current snapshot:** Fields such as material, condition score and criticality are today's values, not what they were on 1 January of each year, which could let future information leak into the backtest.
 - **Patchy and assumed data:** Breaks before 1997 are unreliable, and we assumed pipe IDs match across files, that "Asset Size (cm)" is really millimetres, and that breaks dated before a pipe's install date belong to a replaced pipe.
 
-## Recommendations
+## 2. Recommendations
 
 These are the next steps we would take to move from a datathon prototype to something a maintenance planner could trust. They focus on better data, local validation and involving the people who will use the ranking.
 
