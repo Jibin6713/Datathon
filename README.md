@@ -81,6 +81,7 @@ infra/           Snowflake setup script, Terraform, cost monitoring
 - Architecture: [`docs/02_architecture.md`](docs/02_architecture.md)
 - Decision log: [`docs/decision_log.md`](docs/decision_log.md)
 - Limitations and learnings: [`docs/06_limitations_learnings.md`](docs/06_limitations_learnings.md)
+- Roadmap: [`docs/08_roadmap.md`](docs/08_roadmap.md)
 
 ## Team
 
