@@ -23,8 +23,6 @@ These are the next steps we would take to move from a datathon prototype to some
 
 ## Learnings
 
-## Learnings
-
 These are the main lessons our team took from building the pipeline, model and dashboard in three days. Most of them are about working with rare, messy data and organising a team under a tight deadline.
 
 - **Start simple:** An explainable rule-based score gave us something working quickly and a baseline for any ML model to beat.
