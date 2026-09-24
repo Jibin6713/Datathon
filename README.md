@@ -19,6 +19,7 @@ infra/        Platform: Snowflake setup, Terraform, RBAC, cost monitoring (Jibin
 .github/      CI/CD workflows
 requirements.txt  shared Python packages for local work
 ```
+<img width="2720" height="2224" alt="data_nerds_architecture_v2" src="https://github.com/user-attachments/assets/b8ce7b33-ab85-437a-bae3-6fa7c5386079" />
 
 ## How we work
 
