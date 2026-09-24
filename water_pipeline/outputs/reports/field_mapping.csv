@@ -1,0 +1,65 @@
+﻿table,original_field,normalized_field,raw_field,dtype,rule
+assets,OBJECTID,source_object_id,raw__source_object_id,string,trim outer whitespace; blank to missing; raw value preserved
+assets,WATMAINID,asset_id,raw__asset_id,string,trim outer whitespace; blank to missing; raw value preserved
+assets,STATUS,status,raw__status,string,trim outer whitespace; blank to missing; raw value preserved
+assets,PRESSURE_ZONE,pressure_zone,raw__pressure_zone,string,trim outer whitespace; blank to missing; raw value preserved
+assets,ROADSEGMENTID,road_segment_id,raw__road_segment_id,string,trim outer whitespace; blank to missing; raw value preserved
+assets,MAP_LABEL,map_label,raw__map_label,string,trim outer whitespace; blank to missing; raw value preserved
+assets,CATEGORY,category,raw__category,string,trim outer whitespace; blank to missing; raw value preserved
+assets,PIPE_SIZE,pipe_size,raw__pipe_size,Float64,parse numeric; invalid to missing; raw value preserved; <=0 to missing; no pipe deletion; mm inferred from MAP_LABEL
+assets,MATERIAL,material,raw__material,string,trim outer whitespace; blank to missing; raw value preserved
+assets,LINED,lined,raw__lined,string,trim outer whitespace; blank to missing; raw value preserved
+assets,LINED_DATE,lined_date,raw__lined_date,datetime64[us],parse %m/%d/%Y %I:%M:%S %p; naive timestamp; never convert to UTC
+assets,LINED_MATERIAL,lined_material,raw__lined_material,string,trim outer whitespace; blank to missing; raw value preserved
+assets,INSTALLATION_DATE,installation_date,raw__installation_date,datetime64[us],parse %m/%d/%Y %I:%M:%S %p; naive timestamp; never convert to UTC
+assets,ACQUISITION,acquisition,raw__acquisition,string,trim outer whitespace; blank to missing; raw value preserved
+assets,CONSULTANT,consultant,raw__consultant,string,trim outer whitespace; blank to missing; raw value preserved
+assets,OWNERSHIP,ownership,raw__ownership,string,trim outer whitespace; blank to missing; raw value preserved
+assets,BRIDGE_MAIN,bridge_main,raw__bridge_main,string,trim outer whitespace; blank to missing; raw value preserved
+assets,BRIDGE_DETAILS,bridge_details,raw__bridge_details,string,trim outer whitespace; blank to missing; raw value preserved
+assets,CRITICALITY,criticality,raw__criticality,Float64,parse numeric; invalid to missing; raw value preserved; -1 to missing
+assets,REL_CLEANING_AREA,rel_cleaning_area,raw__rel_cleaning_area,string,trim outer whitespace; blank to missing; raw value preserved
+assets,REL_CLEANING_SUBAREA,rel_cleaning_subarea,raw__rel_cleaning_subarea,string,trim outer whitespace; blank to missing; raw value preserved
+assets,Undersized,undersized,raw__undersized,string,trim outer whitespace; blank to missing; raw value preserved
+assets,Shallow Main,shallow_main,raw__shallow_main,string,trim outer whitespace; blank to missing; raw value preserved
+assets,Condition Score,condition_score,raw__condition_score,Float64,parse numeric; invalid to missing; raw value preserved; -1 to missing
+assets,OVERSIZED,oversized,raw__oversized,string,trim outer whitespace; blank to missing; raw value preserved
+assets,CLEANED,cleaned,raw__cleaned,string,trim outer whitespace; blank to missing; raw value preserved
+assets,Shape__Length,length_m,raw__length_m,Float64,parse numeric; invalid to missing; raw value preserved; metres inferred from MAP_LABEL; no geometry/CRS metadata
+events,OBJECTID,source_object_id,raw__source_object_id,string,trim outer whitespace; blank to missing; raw value preserved
+events,Wat Break Incident ID,event_id,raw__event_id,string,trim outer whitespace; blank to missing; raw value preserved
+events,Incident date,incident_date,raw__incident_date,datetime64[us],parse %m/%d/%Y %I:%M:%S %p; naive timestamp; never convert to UTC
+events,Type of Asset Broken,asset_type,raw__asset_type,string,trim outer whitespace; blank to missing; raw value preserved
+events,Does the road need to be closed?,road_closure,raw__road_closure,string,trim outer whitespace; blank to missing; raw value preserved
+events,Does the sidewalk need to be closed?,sidewalk_closure,raw__sidewalk_closure,string,trim outer whitespace; blank to missing; raw value preserved
+events,Estimated Hours for Repair,estimated_repair_hours,raw__estimated_repair_hours,string,trim outer whitespace; blank to missing; raw value preserved
+events,Estimated Number of Units Impacted,estimated_units_impacted,raw__estimated_units_impacted,string,trim outer whitespace; blank to missing; raw value preserved
+events,CW Service Request Number,cw_service_request_number,raw__cw_service_request_number,string,trim outer whitespace; blank to missing; raw value preserved
+events,Current status of the break,break_status,raw__break_status,string,trim outer whitespace; blank to missing; raw value preserved
+events,Status last updated date,status_updated_date,raw__status_updated_date,datetime64[us],parse %m/%d/%Y %I:%M:%S %p; naive timestamp; never convert to UTC
+events,CW Workorder #,cw_workorder_number,raw__cw_workorder_number,string,trim outer whitespace; blank to missing; raw value preserved
+events,Date operations was returned to normal service,normal_service_date,raw__normal_service_date,datetime64[us],parse %m/%d/%Y %I:%M:%S %p; naive timestamp; never convert to UTC
+events,Nature of Break,break_nature,raw__break_nature,string,trim outer whitespace; blank to missing; raw value preserved
+events,Apparent cause of break,break_cause,raw__break_cause,string,trim outer whitespace; blank to missing; raw value preserved
+events,Repair Type,repair_type,raw__repair_type,string,trim outer whitespace; blank to missing; raw value preserved
+events,Type of Planned Maintenance,planned_maintenance_type,raw__planned_maintenance_type,string,trim outer whitespace; blank to missing; raw value preserved
+events,List Valves Closed,valves_closed,raw__valves_closed,string,trim outer whitespace; blank to missing; raw value preserved
+events,List Valves Opened,valves_opened,raw__valves_opened,string,trim outer whitespace; blank to missing; raw value preserved
+events,List Hydrants Called Out,hydrants_called_out,raw__hydrants_called_out,string,trim outer whitespace; blank to missing; raw value preserved
+events,List Hydrants Called Back In,hydrants_called_back_in,raw__hydrants_called_back_in,string,trim outer whitespace; blank to missing; raw value preserved
+events,Categorization of the Break,break_category,raw__break_category,string,trim outer whitespace; blank to missing; raw value preserved
+events,Road Segment ID,road_segment_id,raw__road_segment_id,string,trim outer whitespace; blank to missing; raw value preserved
+events,Closest Civic Number,closest_civic_number,raw__closest_civic_number,string,trim outer whitespace; blank to missing; raw value preserved
+events,Street,street,raw__street,string,trim outer whitespace; blank to missing; raw value preserved
+events,Related Asset ID,related_asset_id,raw__related_asset_id,string,trim outer whitespace; blank to missing; raw value preserved
+events,Related Asset Depth (m),asset_depth_m,raw__asset_depth_m,Float64,parse numeric; invalid to missing; raw value preserved
+events,Depth of Frost (m),frost_depth_m,raw__frost_depth_m,Float64,parse numeric; invalid to missing; raw value preserved
+events,Asset Size (cm),asset_size_reported,raw__asset_size_reported,Float64,parse numeric; invalid to missing; raw value preserved; unit unresolved; NO centimetre conversion
+events,Year Asset Installed,reported_installation_year,raw__reported_installation_year,Float64,parse numeric; invalid to missing; raw value preserved
+events,Asset Material,asset_material,raw__asset_material,string,trim outer whitespace; blank to missing; raw value preserved
+events,Asset Exists,asset_exists,raw__asset_exists,string,trim outer whitespace; blank to missing; raw value preserved
+events,GLOBALID,global_id,raw__global_id,string,trim outer whitespace; blank to missing; raw value preserved
+events,UPDATE_BY,update_by,raw__update_by,string,trim outer whitespace; blank to missing; raw value preserved
+events,UPDATE_DATE,update_date,raw__update_date,datetime64[us],parse %m/%d/%Y %I:%M:%S %p; naive timestamp; never convert to UTC
+events,x,x,raw__x,Float64,parse numeric; invalid to missing; raw value preserved
+events,y,y,raw__y,Float64,parse numeric; invalid to missing; raw value preserved

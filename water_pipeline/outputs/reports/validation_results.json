@@ -1,0 +1,240 @@
+{
+  "pipeline_sha256": "e985ff55bc4753c4cbd8ec878ad8bf343dae0048bde30569e49a8e42a25711e6",
+  "validator_sha256": "cafcb9af4a451f272d0739ecece06408167f4e9162e65aae6105a1c9c46df15b",
+  "checks": [
+    {
+      "check": "01_source_unchanged_and_archive_identical",
+      "status": "PASS",
+      "detail": "Source SHA-256 checked before and after BOTH full runs; archives match byte-for-byte"
+    },
+    {
+      "check": "01_import_record_counts",
+      "status": "PASS",
+      "detail": "stdlib CSV/pandas/standardized rows: assets=16214, events=3020; no dropped source records"
+    },
+    {
+      "check": "01_expected_file_version",
+      "status": "PASS",
+      "detail": "Checksums compared to independently recorded source version; any difference is a version discrepancy, never corrected by changing data"
+    },
+    {
+      "check": "01_all_original_cells_and_record_numbers_preserved",
+      "status": "PASS",
+      "detail": "Every cell from 27 asset fields and 37 event fields equals the mapped raw__ field"
+    },
+    {
+      "check": "02_primary_keys_present_unique",
+      "status": "PASS",
+      "detail": "WATMAINID and Wat Break Incident ID; OBJECTID is never a join key"
+    },
+    {
+      "check": "02_key_dates_parse",
+      "status": "PASS",
+      "detail": "All installation/incident dates and all nonempty optional dates parsed with explicit month-first format"
+    },
+    {
+      "check": "02_no_timezone_conversion",
+      "status": "PASS",
+      "detail": "Naive timestamps preserved in Parquet; source timezone not inferred"
+    },
+    {
+      "check": "02_invalid_pipe_size_retained_as_missing",
+      "status": "PASS",
+      "detail": "PIPE_SIZE=0: assets 158898 and 159294 remain in assets and eligible annual samples"
+    },
+    {
+      "check": "02_default_values_unknown",
+      "status": "PASS",
+      "detail": "CRITICALITY:3049 and Condition Score:484 defaults set missing; originals preserved"
+    },
+    {
+      "check": "02_key_field_missingness_reported",
+      "status": "PASS",
+      "detail": "{'asset_id': 0, 'installation_date': 0, 'pipe_size': 2, 'material': 1, 'length_m': 0, 'pressure_zone': 0}"
+    },
+    {
+      "check": "03_expected_funnel",
+      "status": "PASS",
+      "detail": "2925 eligible = 2417 matched + 508 unmatched; 2417 = 325 before installation + 2092 reliable; no difference from baseline"
+    },
+    {
+      "check": "03_dispositions_reconcile_all_events",
+      "status": "PASS",
+      "detail": "{'event_before_install': 325, 'not_main': 76, 'reliable_event': 2092, 'repair_not_completed': 19, 'unmatched_asset': 508}"
+    },
+    {
+      "check": "04_quality_rows_traceable",
+      "status": "PASS",
+      "detail": "7219 issue rows with source file, logical row, record ID, raw value, reason and action"
+    },
+    {
+      "check": "04_same_id_day_distinct_events_retained",
+      "status": "PASS",
+      "detail": "All ID/day groups:23 groups/53 rows; eligible:18 groups/41 rows; reliable:9 groups/18 rows. ID=0 group is a placeholder, not a known pipe"
+    },
+    {
+      "check": "04_event_asset_size_not_converted",
+      "status": "PASS",
+      "detail": "Numeric values kept in their reported unresolved unit, no cm/mm scaling"
+    },
+    {
+      "check": "05_unique_installed_asset_year_keys",
+      "status": "PASS",
+      "detail": "All 159994 expected keys match; installation strictly before prediction; joins did not multiply rows"
+    },
+    {
+      "check": "05_independent_recalculation_all_feature_rows",
+      "status": "PASS",
+      "detail": "Recomputed every age/count/3-year/recency/prior flag/target from original CSV using datetime and bisect; mismatches=0"
+    },
+    {
+      "check": "05_forbidden_inputs_absent",
+      "status": "PASS",
+      "detail": "Only model input allowlist + identifiers + split + target; current condition/cleaned/future causes and repair details absent"
+    },
+    {
+      "check": "06_real_january_first_boundary",
+      "status": "PASS",
+      "detail": "Real event 2416 on pipe 41030 at 2018-01-01 00:00 is excluded from 2017 target and 2018 history, included in 2018 target"
+    },
+    {
+      "check": "07_asset_134292",
+      "status": "PASS",
+      "detail": "2025-01-01: past=1, last3y=0, since=7.083963622342, target=1; 2025 event never included in history"
+    },
+    {
+      "check": "08_idempotent_full_rerun",
+      "status": "PASS",
+      "detail": "Two complete runs; 19 deterministic artifact SHA-256 values compared, changed=[]; all tables exactly equal; run_metadata timestamp excluded"
+    },
+    {
+      "check": "09_disjoint_complete_year_splits",
+      "status": "PASS",
+      "detail": "{'test': [2024, 2025], 'train': [2015, 2016, 2017, 2018, 2019, 2020, 2021], 'validation': [2022, 2023]}"
+    },
+    {
+      "check": "09_per_year_counts_and_rates",
+      "status": "PASS",
+      "detail": "Annual denominators/positive counts/rates checked independently; see annual_summary.csv"
+    },
+    {
+      "check": "09_no_2026_censored_zero_labels",
+      "status": "PASS",
+      "detail": "No 2026 samples; cutoff 2026-01-01; completeness of registry is separately unverified"
+    },
+    {
+      "check": "06_automated_boundary_and_regression_tests",
+      "status": "PASS",
+      "detail": "Executed unittest suite including synthetic exact boundaries, leap years, no-history missingness, duplicate keys, unobserved windows, normalization and actual data; see unit_tests.txt"
+    },
+    {
+      "check": "historical_asset_membership_and_attribute_validity",
+      "status": "UNVERIFIABLE",
+      "detail": "No retired/replaced/split asset histories or attribute validity periods; current snapshot backfill cannot be proven leakage-free"
+    },
+    {
+      "check": "historical_event_availability_and_repair_status",
+      "status": "UNVERIFIABLE",
+      "detail": "No trustworthy first-recorded time or full status history; current repair-completed filter is retrospective"
+    },
+    {
+      "check": "registry_coverage_and_reporting_delay",
+      "status": "UNVERIFIABLE",
+      "detail": "Calendar windows have elapsed; CSV alone does not prove complete recording or finalization of all breaks"
+    },
+    {
+      "check": "authoritative_units_and_date_precision",
+      "status": "UNVERIFIABLE",
+      "detail": "Asset units inferred from MAP_LABEL; event Asset Size units unresolved; source CRS and installation date precision unavailable"
+    }
+  ],
+  "status_counts": {
+    "PASS": 25,
+    "UNVERIFIABLE": 4
+  },
+  "source_sha256": {
+    "assets": "b369f143b345002805cf6ee15c59b5576d1fd09fd86d7246e0369d020d68bc03",
+    "events": "d6367b4234d22462e62f0c567a210fc4a23b10e068d31996645a1e24ac8d2d04"
+  },
+  "feature_rows": 159994,
+  "annual_counts": [
+    {
+      "year": 2015,
+      "split": "train",
+      "sample_count": 12669,
+      "positive_count": 91,
+      "positive_rate": 0.007182887362854211
+    },
+    {
+      "year": 2016,
+      "split": "train",
+      "sample_count": 12996,
+      "positive_count": 53,
+      "positive_rate": 0.004078177900892582
+    },
+    {
+      "year": 2017,
+      "split": "train",
+      "sample_count": 13231,
+      "positive_count": 64,
+      "positive_rate": 0.004837124933867433
+    },
+    {
+      "year": 2018,
+      "split": "train",
+      "sample_count": 13701,
+      "positive_count": 76,
+      "positive_rate": 0.005547040362017371
+    },
+    {
+      "year": 2019,
+      "split": "train",
+      "sample_count": 13993,
+      "positive_count": 67,
+      "positive_rate": 0.004788108339884228
+    },
+    {
+      "year": 2020,
+      "split": "train",
+      "sample_count": 14827,
+      "positive_count": 51,
+      "positive_rate": 0.003439670870708842
+    },
+    {
+      "year": 2021,
+      "split": "train",
+      "sample_count": 15218,
+      "positive_count": 66,
+      "positive_rate": 0.004336969378367722
+    },
+    {
+      "year": 2022,
+      "split": "validation",
+      "sample_count": 15504,
+      "positive_count": 79,
+      "positive_rate": 0.00509545923632611
+    },
+    {
+      "year": 2023,
+      "split": "validation",
+      "sample_count": 15792,
+      "positive_count": 40,
+      "positive_rate": 0.0025329280648429585
+    },
+    {
+      "year": 2024,
+      "split": "test",
+      "sample_count": 15961,
+      "positive_count": 48,
+      "positive_rate": 0.003007330367771443
+    },
+    {
+      "year": 2025,
+      "split": "test",
+      "sample_count": 16102,
+      "positive_count": 70,
+      "positive_rate": 0.004347286051422184
+    }
+  ],
+  "unittest_returncode": 0
+}

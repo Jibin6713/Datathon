@@ -1,0 +1,4 @@
+# Tested with Python 3.14.5. Runtime only; unittest is in the Python standard library.
+pandas==3.0.6
+numpy==2.5.3
+pyarrow==25.0.1

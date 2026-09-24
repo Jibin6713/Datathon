@@ -1,0 +1,12 @@
+﻿table,issue_code,field,issue_count,affected_records
+assets,default_minus_one,condition_score,484,484
+assets,default_minus_one,criticality,3049,3049
+assets,invalid_pipe_size,pipe_size,2,2
+assets,lined_date_missing,lined_date,4,4
+assets,unknown_material,material,1,1
+events,asset_size_unit_unverified,asset_size_reported,2697,2697
+events,event_before_install,incident_date,325,325
+events,normal_service_date_before_incident,normal_service_date,2,2
+events,placeholder_related_asset_id,related_asset_id,13,13
+events,same_pipe_same_day_multiple_events,incident_date,53,53
+events,unmatched_asset,related_asset_id,589,589

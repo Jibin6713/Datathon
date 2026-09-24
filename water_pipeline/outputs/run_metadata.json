@@ -1,0 +1,11 @@
+{
+  "executed_at_utc": "2026-09-23T12:44:45.256753+00:00",
+  "note": "UTC only for job execution timestamp, not source incidents",
+  "python": "3.14.5",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3",
+  "pyarrow": "25.0.1",
+  "interpreter": "D:\\Datathon\\agentic-ai-workshop\\.venv\\Scripts\\python.exe",
+  "pipeline_sha256": "e985ff55bc4753c4cbd8ec878ad8bf343dae0048bde30569e49a8e42a25711e6",
+  "output": "D:\\Datathon\\water_pipeline\\outputs"
+}

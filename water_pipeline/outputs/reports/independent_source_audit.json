@@ -1,0 +1,839 @@
+{
+  "sources": {
+    "assets": {
+      "file": "Water_Mains_5473643541506873803.csv",
+      "rows": 16214,
+      "columns": [
+        "OBJECTID",
+        "WATMAINID",
+        "STATUS",
+        "PRESSURE_ZONE",
+        "ROADSEGMENTID",
+        "MAP_LABEL",
+        "CATEGORY",
+        "PIPE_SIZE",
+        "MATERIAL",
+        "LINED",
+        "LINED_DATE",
+        "LINED_MATERIAL",
+        "INSTALLATION_DATE",
+        "ACQUISITION",
+        "CONSULTANT",
+        "OWNERSHIP",
+        "BRIDGE_MAIN",
+        "BRIDGE_DETAILS",
+        "CRITICALITY",
+        "REL_CLEANING_AREA",
+        "REL_CLEANING_SUBAREA",
+        "Undersized",
+        "Shallow Main",
+        "Condition Score",
+        "OVERSIZED",
+        "CLEANED",
+        "Shape__Length"
+      ],
+      "sha256": "b369f143b345002805cf6ee15c59b5576d1fd09fd86d7246e0369d020d68bc03"
+    },
+    "events": {
+      "file": "Water_Main_Breaks_-8394745777553033727.csv",
+      "rows": 3020,
+      "columns": [
+        "OBJECTID",
+        "Wat Break Incident ID",
+        "Incident date",
+        "Type of Asset Broken",
+        "Does the road need to be closed?",
+        "Does the sidewalk need to be closed?",
+        "Estimated Hours for Repair",
+        "Estimated Number of Units Impacted",
+        "CW Service Request Number",
+        "Current status of the break",
+        "Status last updated date",
+        "CW Workorder #",
+        "Date operations was returned to normal service",
+        "Nature of Break",
+        "Apparent cause of break",
+        "Repair Type",
+        "Type of Planned Maintenance",
+        "List Valves Closed",
+        "List Valves Opened",
+        "List Hydrants Called Out",
+        "List Hydrants Called Back In",
+        "Categorization of the Break",
+        "Road Segment ID",
+        "Closest Civic Number",
+        "Street",
+        "Related Asset ID",
+        "Related Asset Depth (m)",
+        "Depth of Frost (m)",
+        "Asset Size (cm)",
+        "Year Asset Installed",
+        "Asset Material",
+        "Asset Exists",
+        "GLOBALID",
+        "UPDATE_BY",
+        "UPDATE_DATE",
+        "x",
+        "y"
+      ],
+      "sha256": "d6367b4234d22462e62f0c567a210fc4a23b10e068d31996645a1e24ac8d2d04"
+    }
+  },
+  "assets_ids": {
+    "missing": 0,
+    "duplicate_ids": {}
+  },
+  "events_ids": {
+    "missing": 0,
+    "duplicate_ids": {}
+  },
+  "dates": {
+    "assets.INSTALLATION_DATE": {
+      "missing": 0,
+      "parse_failures": [],
+      "min": "1889-06-01T00:00:00",
+      "max": "2026-04-30T00:00:00"
+    },
+    "assets.LINED_DATE": {
+      "missing": 16160,
+      "parse_failures": [],
+      "min": "1970-01-02T05:00:00",
+      "max": "2022-02-11T17:00:00"
+    },
+    "events.Incident date": {
+      "missing": 0,
+      "parse_failures": [],
+      "min": "1985-01-01T00:00:00",
+      "max": "2026-09-19T18:25:59"
+    },
+    "events.Status last updated date": {
+      "missing": 150,
+      "parse_failures": [],
+      "min": "2011-12-15T15:38:26",
+      "max": "2026-09-19T18:25:59"
+    },
+    "events.Date operations was returned to normal service": {
+      "missing": 2914,
+      "parse_failures": [],
+      "min": "2017-01-31T23:30:00",
+      "max": "2023-03-11T18:20:01"
+    },
+    "events.UPDATE_DATE": {
+      "missing": 573,
+      "parse_failures": [],
+      "min": "2011-12-15T15:38:26",
+      "max": "2021-11-05T14:29:57"
+    }
+  },
+  "asset_statuses": {
+    "ACTIVE": 16214
+  },
+  "asset_missing_fields": {
+    "OBJECTID": 0,
+    "WATMAINID": 0,
+    "STATUS": 0,
+    "PRESSURE_ZONE": 0,
+    "ROADSEGMENTID": 0,
+    "MAP_LABEL": 0,
+    "CATEGORY": 0,
+    "PIPE_SIZE": 0,
+    "MATERIAL": 0,
+    "LINED": 0,
+    "LINED_DATE": 16160,
+    "LINED_MATERIAL": 0,
+    "INSTALLATION_DATE": 0,
+    "ACQUISITION": 1,
+    "CONSULTANT": 11102,
+    "OWNERSHIP": 0,
+    "BRIDGE_MAIN": 0,
+    "BRIDGE_DETAILS": 16206,
+    "CRITICALITY": 0,
+    "REL_CLEANING_AREA": 0,
+    "REL_CLEANING_SUBAREA": 0,
+    "Undersized": 0,
+    "Shallow Main": 0,
+    "Condition Score": 0,
+    "OVERSIZED": 0,
+    "CLEANED": 0,
+    "Shape__Length": 0
+  },
+  "invalid_pipe_size": [
+    {
+      "asset_id": "158898",
+      "pipe_size": "0"
+    },
+    {
+      "asset_id": "159294",
+      "pipe_size": "0"
+    }
+  ],
+  "default_minus_one": {
+    "CRITICALITY": 3049,
+    "Condition Score": 484
+  },
+  "event_type_status": [
+    {
+      "asset_type": "MAIN",
+      "status": "REPAIR COMPLETED",
+      "count": 2925
+    },
+    {
+      "asset_type": "SERVICE",
+      "status": "REPAIR COMPLETED",
+      "count": 73
+    },
+    {
+      "asset_type": "MAIN",
+      "status": "CANCELLED",
+      "count": 18
+    },
+    {
+      "asset_type": "SERVICE",
+      "status": "CANCELLED",
+      "count": 3
+    },
+    {
+      "asset_type": "MAIN",
+      "status": "UNDER INVESTIGATION",
+      "count": 1
+    }
+  ],
+  "event_reconciliation": {
+    "total": 3020,
+    "main_repair_completed": 2925,
+    "matched": 2417,
+    "unmatched": 508,
+    "before_install": 325,
+    "reliable": 2092
+  },
+  "additional_quality": {
+    "eligible_related_asset_id_zero": 10,
+    "eligible_related_asset_id_missing": 0,
+    "matched_size_nonmissing": 2415,
+    "matched_size_same_numeric_value": 2402,
+    "asset_material_counts": {
+      "DI": 5100,
+      "PVC": 8112,
+      "CI": 2013,
+      "CPP": 231,
+      "AC": 56,
+      "PVCO": 608,
+      "HDPE": 51,
+      "PVCB": 22,
+      "COP": 8,
+      "PVCF": 6,
+      "ST": 5,
+      "HDPE IN CI": 1,
+      "XXX": 1
+    },
+    "asset_pressure_zone_counts": {
+      "KIT 6": 988,
+      "KIT 4": 10549,
+      "KIT 2W": 1413,
+      "KIT 5": 2356,
+      "KIT 2EA": 172,
+      "KIT 2E": 309,
+      "KIT 4A": 176,
+      "BRIDGEPORT": 201,
+      "MANNHEIM": 4,
+      "BRESLAU": 1,
+      "RAW NO ZONE": 15,
+      "CAM 1": 1,
+      "BRESLAU SOUTH": 6,
+      "WAT 4": 17,
+      "BRESLAU NORTH": 5,
+      "CAM 2W": 1
+    },
+    "asset_nonpositive_length": [],
+    "month_day_format_evidence": "3/26/2001 12:00:00 AM"
+  },
+  "before_install_examples": [
+    {
+      "event_id": "73",
+      "asset_id": "76420",
+      "incident": "12/19/2004 12:00:00 AM",
+      "install": "11/27/2009 12:00:00 AM"
+    },
+    {
+      "event_id": "1678",
+      "asset_id": "136126",
+      "incident": "12/15/2011 3:38:26 PM",
+      "install": "8/28/2017 12:00:00 AM"
+    },
+    {
+      "event_id": "70",
+      "asset_id": "98392",
+      "incident": "2/25/2003 12:00:00 AM",
+      "install": "12/12/2014 12:00:00 AM"
+    },
+    {
+      "event_id": "92",
+      "asset_id": "79000",
+      "incident": "9/22/2003 12:00:00 AM",
+      "install": "12/11/2013 12:00:00 AM"
+    },
+    {
+      "event_id": "1295",
+      "asset_id": "72730",
+      "incident": "1/29/2005 12:00:00 AM",
+      "install": "10/1/2005 12:00:00 AM"
+    }
+  ],
+  "same_asset_day_all": {
+    "groups": 23,
+    "rows": 53,
+    "examples": [
+      {
+        "asset_id": "88430",
+        "date": "2013-02-01",
+        "event_ids": [
+          "1862",
+          "1865"
+        ]
+      },
+      {
+        "asset_id": "77368",
+        "date": "2004-12-24",
+        "event_ids": [
+          "462",
+          "475"
+        ]
+      },
+      {
+        "asset_id": "76569",
+        "date": "1999-07-07",
+        "event_ids": [
+          "1317",
+          "11"
+        ]
+      },
+      {
+        "asset_id": "69385",
+        "date": "2003-03-02",
+        "event_ids": [
+          "202",
+          "203"
+        ]
+      },
+      {
+        "asset_id": "20570",
+        "date": "2009-02-14",
+        "event_ids": [
+          "1370",
+          "1368"
+        ]
+      },
+      {
+        "asset_id": "0",
+        "date": "2011-12-15",
+        "event_ids": [
+          "505",
+          "1330",
+          "1329",
+          "725",
+          "7",
+          "1035",
+          "719"
+        ]
+      },
+      {
+        "asset_id": "62530",
+        "date": "1999-02-04",
+        "event_ids": [
+          "182",
+          "183"
+        ]
+      },
+      {
+        "asset_id": "77106",
+        "date": "2003-03-12",
+        "event_ids": [
+          "213",
+          "214"
+        ]
+      },
+      {
+        "asset_id": "41030",
+        "date": "1997-01-27",
+        "event_ids": [
+          "175",
+          "1302"
+        ]
+      },
+      {
+        "asset_id": "3640",
+        "date": "2010-01-26",
+        "event_ids": [
+          "1451",
+          "1450"
+        ]
+      }
+    ]
+  },
+  "same_asset_day_eligible": {
+    "groups": 18,
+    "rows": 41,
+    "examples": [
+      {
+        "asset_id": "88430",
+        "date": "2013-02-01",
+        "event_ids": [
+          "1862",
+          "1865"
+        ]
+      },
+      {
+        "asset_id": "77368",
+        "date": "2004-12-24",
+        "event_ids": [
+          "462",
+          "475"
+        ]
+      },
+      {
+        "asset_id": "76569",
+        "date": "1999-07-07",
+        "event_ids": [
+          "1317",
+          "11"
+        ]
+      },
+      {
+        "asset_id": "69385",
+        "date": "2003-03-02",
+        "event_ids": [
+          "202",
+          "203"
+        ]
+      },
+      {
+        "asset_id": "20570",
+        "date": "2009-02-14",
+        "event_ids": [
+          "1370",
+          "1368"
+        ]
+      },
+      {
+        "asset_id": "0",
+        "date": "2011-12-15",
+        "event_ids": [
+          "505",
+          "1330",
+          "1329",
+          "725",
+          "7",
+          "1035",
+          "719"
+        ]
+      },
+      {
+        "asset_id": "62530",
+        "date": "1999-02-04",
+        "event_ids": [
+          "182",
+          "183"
+        ]
+      },
+      {
+        "asset_id": "77106",
+        "date": "2003-03-12",
+        "event_ids": [
+          "213",
+          "214"
+        ]
+      },
+      {
+        "asset_id": "41030",
+        "date": "1997-01-27",
+        "event_ids": [
+          "175",
+          "1302"
+        ]
+      },
+      {
+        "asset_id": "3640",
+        "date": "2010-01-26",
+        "event_ids": [
+          "1451",
+          "1450"
+        ]
+      }
+    ]
+  },
+  "same_asset_day_reliable": {
+    "groups": 9,
+    "rows": 18,
+    "examples": [
+      {
+        "asset_id": "88430",
+        "date": "2013-02-01",
+        "event_ids": [
+          "1862",
+          "1865"
+        ]
+      },
+      {
+        "asset_id": "41030",
+        "date": "1997-01-27",
+        "event_ids": [
+          "175",
+          "1302"
+        ]
+      },
+      {
+        "asset_id": "3640",
+        "date": "2010-01-26",
+        "event_ids": [
+          "1451",
+          "1450"
+        ]
+      },
+      {
+        "asset_id": "19080",
+        "date": "2014-03-27",
+        "event_ids": [
+          "1893",
+          "1896"
+        ]
+      },
+      {
+        "asset_id": "42920",
+        "date": "2002-02-05",
+        "event_ids": [
+          "916",
+          "917"
+        ]
+      },
+      {
+        "asset_id": "17720",
+        "date": "2010-10-25",
+        "event_ids": [
+          "1511",
+          "1537"
+        ]
+      },
+      {
+        "asset_id": "85314",
+        "date": "2018-12-14",
+        "event_ids": [
+          "2406",
+          "2404"
+        ]
+      },
+      {
+        "asset_id": "85314",
+        "date": "2017-12-25",
+        "event_ids": [
+          "2313",
+          "2314"
+        ]
+      },
+      {
+        "asset_id": "87898",
+        "date": "2019-08-25",
+        "event_ids": [
+          "136202",
+          "136203"
+        ]
+      }
+    ]
+  },
+  "reliable_event_years": {
+    "1986": 1,
+    "1987": 2,
+    "1991": 1,
+    "1997": 65,
+    "1998": 68,
+    "1999": 79,
+    "2000": 84,
+    "2001": 62,
+    "2002": 76,
+    "2003": 87,
+    "2004": 54,
+    "2005": 58,
+    "2006": 56,
+    "2007": 77,
+    "2008": 51,
+    "2009": 62,
+    "2010": 69,
+    "2011": 88,
+    "2012": 41,
+    "2013": 83,
+    "2014": 107,
+    "2015": 96,
+    "2016": 54,
+    "2017": 68,
+    "2018": 79,
+    "2019": 74,
+    "2020": 56,
+    "2021": 71,
+    "2022": 89,
+    "2023": 42,
+    "2024": 53,
+    "2025": 76,
+    "2026": 63
+  },
+  "completion_date_anomalies": {
+    "Status last updated date": {
+      "count": 0,
+      "examples": []
+    },
+    "Date operations was returned to normal service": {
+      "count": 1,
+      "examples": [
+        {
+          "event_id": "2252",
+          "incident": "12/1/2017 3:15:00 PM",
+          "value": "1/31/2017 11:30:00 PM"
+        }
+      ]
+    },
+    "UPDATE_DATE": {
+      "count": 0,
+      "examples": []
+    }
+  },
+  "asset_134292": {
+    "OBJECTID": "140433",
+    "WATMAINID": "134292",
+    "STATUS": "ACTIVE",
+    "PRESSURE_ZONE": "KIT 4",
+    "ROADSEGMENTID": "7041",
+    "MAP_LABEL": "103.1m 450mm  CI",
+    "CATEGORY": "TREATED",
+    "PIPE_SIZE": "450",
+    "MATERIAL": "CI",
+    "LINED": "YES",
+    "LINED_DATE": "1/1/1983 12:00:00 AM",
+    "LINED_MATERIAL": "CEMENT",
+    "INSTALLATION_DATE": "1/1/1937 12:00:00 AM",
+    "ACQUISITION": "DONATED",
+    "CONSULTANT": "",
+    "OWNERSHIP": "REGION",
+    "BRIDGE_MAIN": "N",
+    "BRIDGE_DETAILS": "",
+    "CRITICALITY": "7",
+    "REL_CLEANING_AREA": "2",
+    "REL_CLEANING_SUBAREA": "29",
+    "Undersized": "N",
+    "Shallow Main": "N",
+    "Condition Score": "6.15",
+    "OVERSIZED": "N",
+    "CLEANED": "N",
+    "Shape__Length": "103.09996973905"
+  },
+  "events_134292": [
+    {
+      "OBJECTID": "1",
+      "Wat Break Incident ID": "2252",
+      "Incident date": "12/1/2017 3:15:00 PM",
+      "Type of Asset Broken": "MAIN",
+      "Does the road need to be closed?": "Partially Closed",
+      "Does the sidewalk need to be closed?": "Open",
+      "Estimated Hours for Repair": "12-16 hours",
+      "Estimated Number of Units Impacted": "47",
+      "CW Service Request Number": "123456",
+      "Current status of the break": "REPAIR COMPLETED",
+      "Status last updated date": "12/2/2017 12:00:00 AM",
+      "CW Workorder #": "177898",
+      "Date operations was returned to normal service": "1/31/2017 11:30:00 PM",
+      "Nature of Break": "CORROSION AND FITTING/JOINT",
+      "Apparent cause of break": "AGE",
+      "Repair Type": "CUTOUT",
+      "Type of Planned Maintenance": "N/A",
+      "List Valves Closed": "6\" 93563, 94817, 93902,1139; 18\"- 1264, 92862,1142",
+      "List Valves Opened": "",
+      "List Hydrants Called Out": "353",
+      "List Hydrants Called Back In": "353",
+      "Categorization of the Break": "CATEGORY 2",
+      "Road Segment ID": "6961",
+      "Closest Civic Number": "125",
+      "Street": "LANCASTER ST W",
+      "Related Asset ID": "134292",
+      "Related Asset Depth (m)": "1.6",
+      "Depth of Frost (m)": "0.3",
+      "Asset Size (cm)": "450",
+      "Year Asset Installed": "1937",
+      "Asset Material": "CI",
+      "Asset Exists": "Y",
+      "GLOBALID": "3521d297-1a2e-4e7b-a071-fc53ed87e965",
+      "UPDATE_BY": "GIS_DATA",
+      "UPDATE_DATE": "10/3/2018 2:42:09 PM",
+      "x": "541741.1448",
+      "y": "4812353.8463"
+    },
+    {
+      "OBJECTID": "101761",
+      "Wat Break Incident ID": "155653",
+      "Incident date": "7/4/2025 1:12:40 PM",
+      "Type of Asset Broken": "MAIN",
+      "Does the road need to be closed?": "Open",
+      "Does the sidewalk need to be closed?": "Open",
+      "Estimated Hours for Repair": "4-8 hours",
+      "Estimated Number of Units Impacted": "0-50",
+      "CW Service Request Number": "",
+      "Current status of the break": "REPAIR COMPLETED",
+      "Status last updated date": "7/4/2025 1:12:40 PM",
+      "CW Workorder #": "442016",
+      "Date operations was returned to normal service": "",
+      "Nature of Break": "",
+      "Apparent cause of break": "",
+      "Repair Type": "",
+      "Type of Planned Maintenance": "",
+      "List Valves Closed": "",
+      "List Valves Opened": "",
+      "List Hydrants Called Out": "",
+      "List Hydrants Called Back In": "",
+      "Categorization of the Break": "",
+      "Road Segment ID": "7041",
+      "Closest Civic Number": "101",
+      "Street": "LANCASTER ST W",
+      "Related Asset ID": "134292",
+      "Related Asset Depth (m)": "",
+      "Depth of Frost (m)": "",
+      "Asset Size (cm)": "450",
+      "Year Asset Installed": "1937",
+      "Asset Material": "CI",
+      "Asset Exists": "Y",
+      "GLOBALID": "d6db60c9-32d8-40f1-8143-776cf10d5385",
+      "UPDATE_BY": "",
+      "UPDATE_DATE": "",
+      "x": "541760.7918",
+      "y": "4812267.098"
+    }
+  ],
+  "features_134292_2025": {
+    "age_years": 88.00180701862462,
+    "past_break_count": 1,
+    "breaks_last_3y": 0,
+    "years_since_last_break": 7.0839636223422335,
+    "break_next_12m": 1,
+    "past_dates": [
+      "2017-12-01T15:15:00"
+    ],
+    "target_dates": [
+      "2025-07-04T13:12:40"
+    ]
+  },
+  "annual": [
+    {
+      "year": 2015,
+      "n": 12669,
+      "positives": 91,
+      "rate": 0.007182887362854211
+    },
+    {
+      "year": 2016,
+      "n": 12996,
+      "positives": 53,
+      "rate": 0.004078177900892582
+    },
+    {
+      "year": 2017,
+      "n": 13231,
+      "positives": 64,
+      "rate": 0.004837124933867433
+    },
+    {
+      "year": 2018,
+      "n": 13701,
+      "positives": 76,
+      "rate": 0.005547040362017371
+    },
+    {
+      "year": 2019,
+      "n": 13993,
+      "positives": 67,
+      "rate": 0.004788108339884228
+    },
+    {
+      "year": 2020,
+      "n": 14827,
+      "positives": 51,
+      "rate": 0.003439670870708842
+    },
+    {
+      "year": 2021,
+      "n": 15218,
+      "positives": 66,
+      "rate": 0.004336969378367722
+    },
+    {
+      "year": 2022,
+      "n": 15504,
+      "positives": 79,
+      "rate": 0.00509545923632611
+    },
+    {
+      "year": 2023,
+      "n": 15792,
+      "positives": 40,
+      "rate": 0.0025329280648429585
+    },
+    {
+      "year": 2024,
+      "n": 15961,
+      "positives": 48,
+      "rate": 0.003007330367771443
+    },
+    {
+      "year": 2025,
+      "n": 16102,
+      "positives": 70,
+      "rate": 0.004347286051422184
+    }
+  ],
+  "midnight_jan1_events": [
+    {
+      "event_id": "641",
+      "asset_id": "29860",
+      "incident": "1/1/1997 12:00:00 AM"
+    },
+    {
+      "event_id": "1669",
+      "asset_id": "35450",
+      "incident": "1/1/1986 12:00:00 AM"
+    },
+    {
+      "event_id": "1688",
+      "asset_id": "290",
+      "incident": "1/1/1987 12:00:00 AM"
+    },
+    {
+      "event_id": "1646",
+      "asset_id": "64610",
+      "incident": "1/1/1991 12:00:00 AM"
+    },
+    {
+      "event_id": "1690",
+      "asset_id": "17960",
+      "incident": "1/1/1987 12:00:00 AM"
+    },
+    {
+      "event_id": "715",
+      "asset_id": "20280",
+      "incident": "1/1/2000 12:00:00 AM"
+    },
+    {
+      "event_id": "456",
+      "asset_id": "33540",
+      "incident": "1/1/1997 12:00:00 AM"
+    },
+    {
+      "event_id": "1563",
+      "asset_id": "15200",
+      "incident": "1/1/2011 12:00:00 AM"
+    },
+    {
+      "event_id": "1303",
+      "asset_id": "41030",
+      "incident": "1/1/1999 12:00:00 AM"
+    },
+    {
+      "event_id": "2416",
+      "asset_id": "41030",
+      "incident": "1/1/2018 12:00:00 AM"
+    }
+  ]
+}
