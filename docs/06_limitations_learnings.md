@@ -7,8 +7,6 @@ These limitations come from the two-day datathon scope and the trial Snowflake p
 - **No inspection or CCTV data:** The score relies on break history and pipe attributes. We did not use CCTV data because we wanted to minimise the number of Snowflake credits used.
 - **Built in two days on a trial platform:** We had one XSMALL warehouse, a 40 credit cap, and no review by an actual maintenance planner.
 - **Very rare events:** Only about 0.5% of pipes break in a year, so results from the 2022-2025 backtest can swing a lot. We judge the ranking by how many real breaks the top-ranked pipes catch, not by accuracy.
-- **A target of 0 does not mean no leak:** It only means no matching, repaired break was recorded. Unreported leaks and unlinked breaks are counted as "no break".
-- **The pipe register is a current snapshot:** Fields such as material, condition score and criticality are today's values, not what they were on 1 January of each year, which could let future information leak into the backtest.
 - **Patchy and assumed data:** Breaks before 1997 are unreliable, and we assumed pipe IDs match across files, that "Asset Size (cm)" is really millimetres, and that breaks dated before a pipe's install date belong to a replaced pipe.
 
 ## 2. Recommendations
@@ -18,7 +16,6 @@ These are the next steps we would take to move from a datathon prototype to some
 - **Add condition data:** Bring in real inspection records, CCTV defect grades and maintenance logs, which is the original problem the use case describes.
 - **Test on Watercare's data:** Retrain and backtest on local pipes before anyone acts on the ranking.
 - **Add weather and environment data:** Temperature, freeze days, soil and water pressure would help explain the winter spike in breaks.
-- **Rebuild a historical snapshot of the register:** Features should reflect what was known on each 1 January, which removes the risk of future data leaking in.
 - **Involve planners:** Show the ranking to real maintenance planners, record what they inspect and find, and feed that back into the model.
 
 ## Learnings
@@ -29,6 +26,5 @@ These are the main lessons our team took from building the pipeline, model and d
 - **Guard against future data:** Building features only from data before each point in time stops the results looking better than they really are.
 - **Pick the right metric:** For rare events, "how many real breaks the top pipes catch" is more honest than accuracy.
 - **Flag bad data, don't delete it:** We can explain exactly what was excluded and why.
-- **Label quality matters more than model choice:** With rare and noisy labels, defining the target well matters more than using a fancier model.
 - **Set guardrails early:** Roles, credit limits and Terraform on day one avoided permission and cost surprises.
 
