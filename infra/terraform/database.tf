@@ -27,6 +27,11 @@ resource "snowflake_schema" "this" {
   database = snowflake_database.project[local.database].name
   name     = each.key
 
+  # Must match what Snowflake reports for the schemas the hour-0 script made.
+  # is_transient can only be set at creation, so leaving it at "default" makes
+  # Terraform plan to DESTROY and recreate every schema (and their tables).
+  is_transient = "false"
+
   lifecycle {
     prevent_destroy = true
   }
