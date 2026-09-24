@@ -23,3 +23,14 @@ These are the next steps we would take to move from a datathon prototype to some
 
 ## Learnings
 
+## Learnings
+
+These are the main lessons our team took from building the pipeline, model and dashboard in three days. Most of them are about working with rare, messy data and organising a team under a tight deadline.
+
+- **Start simple:** An explainable rule-based score gave us something working quickly and a baseline for any ML model to beat.
+- **Guard against future data:** Building features only from data before each point in time stops the results looking better than they really are.
+- **Pick the right metric:** For rare events, "how many real breaks the top pipes catch" is more honest than accuracy.
+- **Flag bad data, don't delete it:** We can explain exactly what was excluded and why.
+- **Label quality matters more than model choice:** With rare and noisy labels, defining the target well matters more than using a fancier model.
+- **Set guardrails early:** Roles, credit limits and Terraform on day one avoided permission and cost surprises.
+
