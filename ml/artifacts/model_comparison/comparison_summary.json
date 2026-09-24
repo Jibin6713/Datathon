@@ -1,0 +1,94 @@
+{
+  "annual_rank_correlation": 0.6397629403071194,
+  "baseline": {
+    "brier_score": 0.003558967723062132,
+    "log_loss": 0.018249502014499413,
+    "mean_predicted_probability": 0.0045569688893741375,
+    "pr_auc": 0.06777963470587116,
+    "roc_auc": 0.9183029093967121
+  },
+  "comparison_scope": "identical 2024-2025 rows and identical break_next_12m label",
+  "inspection_budgets": {
+    "top_1pct": {
+      "baseline": {
+        "hits": 27,
+        "inspected": 322,
+        "lift": 22.784003579324143,
+        "precision": 0.08385093167701864,
+        "recall": 0.2288135593220339
+      },
+      "baseline_only_true_positives": 8,
+      "fraction": 0.01,
+      "selected_jaccard": 0.30364372469635625,
+      "selected_overlap_count": 150,
+      "selected_union_count": 494,
+      "xgboost": {
+        "hits": 35,
+        "inspected": 322,
+        "lift": 29.53481945467944,
+        "precision": 0.10869565217391304,
+        "recall": 0.2966101694915254
+      },
+      "xgboost_minus_baseline_hits": 8,
+      "xgboost_only_true_positives": 16
+    },
+    "top_2pct": {
+      "baseline": {
+        "hits": 47,
+        "inspected": 643,
+        "lift": 19.861362258481165,
+        "precision": 0.07309486780715396,
+        "recall": 0.3983050847457627
+      },
+      "baseline_only_true_positives": 9,
+      "fraction": 0.02,
+      "selected_jaccard": 0.3857758620689655,
+      "selected_overlap_count": 358,
+      "selected_union_count": 928,
+      "xgboost": {
+        "hits": 55,
+        "inspected": 643,
+        "lift": 23.242019664180088,
+        "precision": 0.08553654743390357,
+        "recall": 0.4661016949152542
+      },
+      "xgboost_minus_baseline_hits": 8,
+      "xgboost_only_true_positives": 17
+    },
+    "top_5pct": {
+      "baseline": {
+        "hits": 74,
+        "inspected": 1605,
+        "lift": 12.527915940651567,
+        "precision": 0.04610591900311527,
+        "recall": 0.6271186440677966
+      },
+      "baseline_only_true_positives": 5,
+      "fraction": 0.05,
+      "selected_jaccard": 0.3968668407310705,
+      "selected_overlap_count": 912,
+      "selected_union_count": 2298,
+      "xgboost": {
+        "hits": 94,
+        "inspected": 1605,
+        "lift": 15.913839167854691,
+        "precision": 0.058566978193146414,
+        "recall": 0.7966101694915254
+      },
+      "xgboost_minus_baseline_hits": 20,
+      "xgboost_only_true_positives": 25
+    }
+  },
+  "mean_absolute_probability_difference": 0.0034705551907114247,
+  "positive_count": 118,
+  "positive_rate": 0.003680254498955182,
+  "probability_correlation": 0.7500683460606585,
+  "sample_count": 32063,
+  "xgboost_aft": {
+    "brier_score": 0.003454841891504633,
+    "log_loss": 0.015621273589924808,
+    "mean_predicted_probability": 0.0038084774728270932,
+    "pr_auc": 0.10780639071209164,
+    "roc_auc": 0.9683883316399213
+  }
+}

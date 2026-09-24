@@ -1,0 +1,19 @@
+{
+  "asset_count": 16207,
+  "criticality_missing_strategy": "median of current eligible scoring population",
+  "criticality_weight": 0.2,
+  "priority_bands": {
+    "HIGH": "next 4 percent through top 5 percent",
+    "IMMEDIATE": "top 1 percent",
+    "MONITOR": "remaining assets",
+    "PLANNED": "next 15 percent through top 20 percent"
+  },
+  "priority_formula": "urgency_score * ((1 - criticality_weight) + criticality_weight * clip(criticality, 0, 10) / 10)",
+  "probability_horizons_months": [
+    12,
+    24,
+    36
+  ],
+  "reference_date": "2026-01-01",
+  "urgency_formula": "100 * (0.60 * P12 + 0.30 * P24 + 0.10 * P36)"
+}
