@@ -1,0 +1,23 @@
+{
+  "completed_at_utc": "2026-09-24T08:13:35.989781+00:00",
+  "input_hashes": {
+    "assets": "dd2ad2b9ed500ce5954f77f7dade7f2c3f5f7d57f73afac7ac433c4b73f44bc0",
+    "contract": "7f5d35f0c7096bfe4ada4956f903571c6c93286cb48adaf20204d499364f1d41",
+    "events": "be02d290d457d3ba38fd70de6b8fa42a731c49bfe02a360ba4c1a2fd60dda029",
+    "features": "c2ce041853f23f50c8b19722b4a08c9c2c66764bd72503906d1b0e69ab6cb884",
+    "source_manifest": "a6c55248a0f33d7f5f9953310dc0396e373d89043d8f84a743e6c98a12f0a87d"
+  },
+  "observation_end_exclusive": "2026-01-01",
+  "primary_outputs": [
+    "pipe_repair_priority.csv",
+    "pipe_risk_drivers.csv",
+    "metrics.json",
+    "xgboost_aft_model.json",
+    "preprocessor.joblib"
+  ],
+  "reference_date": "2026-01-01",
+  "row_counts": {
+    "prioritized_assets": 16207,
+    "survival_landmarks": 159994
+  }
+}

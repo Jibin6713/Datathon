@@ -1,0 +1,23 @@
+{
+  "artifacts": {
+    "coefficients.csv": "6e5e4aaae420e239f9a07093e462264afc87d8a995a9ff622b7a5499cbcdd6f8",
+    "logistic_pipeline.joblib": "88af077b95f3cb01256453365afd2b19cc103f1ad3797f58e807318e930595d6",
+    "metrics.json": "5ea519f9bd2a3ce083aedd8af21fded39350fafeee0b548249a7488c9d375278",
+    "test_predictions.csv": "26fcfd82542924eb63f7ecd0e27a31d566f1cce18f541b2cb623ed5958045fc4",
+    "validation_predictions.csv": "284ae5c34369d6903f50be4d00837e91c7c864649bfade3607763b51afecea65"
+  },
+  "contract_file": "F:\\AAA-nz-auckland-homework\\datathon\\mainline\\water_pipeline\\outputs\\model_contract.json",
+  "contract_file_sha256": "7f5d35f0c7096bfe4ada4956f903571c6c93286cb48adaf20204d499364f1d41",
+  "created_at_utc": "2026-09-24T08:12:39.253082+00:00",
+  "feature_file": "F:\\AAA-nz-auckland-homework\\datathon\\mainline\\water_pipeline\\outputs\\processed\\pipe_risk_features.parquet",
+  "feature_file_sha256": "c2ce041853f23f50c8b19722b4a08c9c2c66764bd72503906d1b0e69ab6cb884",
+  "numpy": "2.3.4",
+  "pandas": "2.3.3",
+  "python": "3.11.2",
+  "row_counts": {
+    "test": 32063,
+    "train": 96635,
+    "validation": 31296
+  },
+  "scikit_learn": "1.8.0"
+}
