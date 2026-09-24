@@ -1,0 +1,21 @@
+{
+  "manifest.json": "a6c55248a0f33d7f5f9953310dc0396e373d89043d8f84a743e6c98a12f0a87d",
+  "model_contract.json": "7f5d35f0c7096bfe4ada4956f903571c6c93286cb48adaf20204d499364f1d41",
+  "processed/assets_standardized.csv": "39b1d2d25b3ce1f173774c8e62225200ddc2bddd37440ae1dde5038f0551c81c",
+  "processed/assets_standardized.parquet": "dd2ad2b9ed500ce5954f77f7dade7f2c3f5f7d57f73afac7ac433c4b73f44bc0",
+  "processed/data_quality_issues.csv": "a26ce3069dae4343cb8c02713b718325e1c15938ade844b5b25b086e38647e0d",
+  "processed/data_quality_issues.parquet": "59a11d3b6940a61ec03218e1ce1f4d6d7e165611847bfc37b65c22ab84e9a021",
+  "processed/events_standardized.csv": "81c8c3e817e7431b6625cf97b3677aad030a65103eb31433cbd63b050de23da4",
+  "processed/events_standardized.parquet": "be02d290d457d3ba38fd70de6b8fa42a731c49bfe02a360ba4c1a2fd60dda029",
+  "processed/pipe_risk_features.csv": "dda1cf1fa16cfe6d735f5b1853ac69fd76e443867b16eb2a2378a66975b38b27",
+  "processed/pipe_risk_features.parquet": "c2ce041853f23f50c8b19722b4a08c9c2c66764bd72503906d1b0e69ab6cb884",
+  "raw/Water_Main_Breaks_-8394745777553033727.csv": "d6367b4234d22462e62f0c567a210fc4a23b10e068d31996645a1e24ac8d2d04",
+  "raw/Water_Mains_5473643541506873803.csv": "b369f143b345002805cf6ee15c59b5576d1fd09fd86d7246e0369d020d68bc03",
+  "reports/annual_summary.csv": "131c027423be84a7a2adc7c0a0bd913ff35a88dcc539b1aa4875e7039b0263a7",
+  "reports/data_quality_summary.csv": "af09fff7f17c195020d4d1586b345d239d2cc85ef095650541ea88dd9b02b4ad",
+  "reports/data_report.md": "38d680c2569f5b4c10e2da6e8ef3d8db3ec7486e36aa1b46219968cda0106658",
+  "reports/event_reconciliation.json": "495580ad06ca27be54dc0daddb6b33e88a5cb593082eb38faebec0cb56206947",
+  "reports/field_completeness.csv": "43e6a02c21fc9575c91c294d9db2f3cbdd3a4a5bcf333b04c0cce90f24e5c074",
+  "reports/field_mapping.csv": "e95df003d5ee128cd71f2fd478e60c1c3d746d231a59e33c71b0d180b35e96eb",
+  "schema.json": "9de3a4b23c42d397c0940b66e57f75500cb5ece717f55c8752c81dc0cc61e30e"
+}

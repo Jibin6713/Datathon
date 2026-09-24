@@ -1,0 +1,50 @@
+{
+  "identifiers": [
+    "asset_id",
+    "as_of_date"
+  ],
+  "inputs": [
+    "age_years",
+    "material",
+    "pipe_size",
+    "length_m",
+    "pressure_zone",
+    "past_break_count",
+    "breaks_last_3y",
+    "years_since_last_break",
+    "had_prior_break"
+  ],
+  "target": "break_next_12m",
+  "split": "split",
+  "split_years": {
+    "train": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "validation": [
+      2022,
+      2023
+    ],
+    "test": [
+      2024,
+      2025
+    ]
+  },
+  "target_definition": "Any reliable recorded MAIN/REPAIR COMPLETED break in [as_of_date, as_of_date + 12 calendar months)",
+  "zero_definition": "No matching eligible break record in window; NOT proven leak-free",
+  "years_denominator_days": 365.2425,
+  "prohibited_inputs": [
+    "condition_score",
+    "cleaned",
+    "future event attributes",
+    "target",
+    "asset_id",
+    "split"
+  ],
+  "historical_snapshot_warning": "Current asset attributes and final repair status lack point-in-time histories"
+}

@@ -1,0 +1,1060 @@
+{
+  "assets_standardized": [
+    {
+      "field": "source_file",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "source_row_number",
+      "dtype": "int64",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__source_object_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "source_object_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__asset_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "asset_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__status",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "status",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__pressure_zone",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "pressure_zone",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__road_segment_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "road_segment_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__map_label",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "map_label",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__category",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "category",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__pipe_size",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "pipe_size",
+      "dtype": "Float64",
+      "missing_count": 2,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__material",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "material",
+      "dtype": "string",
+      "missing_count": 1,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__lined",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "lined",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__lined_date",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "lined_date",
+      "dtype": "datetime64[us]",
+      "missing_count": 16160,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__lined_material",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "lined_material",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__installation_date",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "installation_date",
+      "dtype": "datetime64[us]",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__acquisition",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "acquisition",
+      "dtype": "string",
+      "missing_count": 1,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__consultant",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "consultant",
+      "dtype": "string",
+      "missing_count": 11102,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__ownership",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "ownership",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__bridge_main",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "bridge_main",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__bridge_details",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "bridge_details",
+      "dtype": "string",
+      "missing_count": 16206,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__criticality",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "criticality",
+      "dtype": "Float64",
+      "missing_count": 3049,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__rel_cleaning_area",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "rel_cleaning_area",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__rel_cleaning_subarea",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "rel_cleaning_subarea",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__undersized",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "undersized",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__shallow_main",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "shallow_main",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__condition_score",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "condition_score",
+      "dtype": "Float64",
+      "missing_count": 484,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__oversized",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "oversized",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__cleaned",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "cleaned",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__length_m",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "length_m",
+      "dtype": "Float64",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "invalid_primary_key",
+      "dtype": "bool",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "invalid_pipe_size",
+      "dtype": "boolean",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "model_asset_eligible",
+      "dtype": "bool",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    }
+  ],
+  "events_standardized": [
+    {
+      "field": "source_file",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "source_row_number",
+      "dtype": "int64",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__source_object_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "source_object_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__event_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "event_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__incident_date",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "incident_date",
+      "dtype": "datetime64[us]",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__asset_type",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "asset_type",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__road_closure",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "road_closure",
+      "dtype": "string",
+      "missing_count": 2454,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__sidewalk_closure",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "sidewalk_closure",
+      "dtype": "string",
+      "missing_count": 2457,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__estimated_repair_hours",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "estimated_repair_hours",
+      "dtype": "string",
+      "missing_count": 2456,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__estimated_units_impacted",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "estimated_units_impacted",
+      "dtype": "string",
+      "missing_count": 2469,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__cw_service_request_number",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "cw_service_request_number",
+      "dtype": "string",
+      "missing_count": 2995,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__break_status",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "break_status",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__status_updated_date",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "status_updated_date",
+      "dtype": "datetime64[us]",
+      "missing_count": 150,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__cw_workorder_number",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "cw_workorder_number",
+      "dtype": "string",
+      "missing_count": 1168,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__normal_service_date",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "normal_service_date",
+      "dtype": "datetime64[us]",
+      "missing_count": 2914,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__break_nature",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "break_nature",
+      "dtype": "string",
+      "missing_count": 330,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__break_cause",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "break_cause",
+      "dtype": "string",
+      "missing_count": 462,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__repair_type",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "repair_type",
+      "dtype": "string",
+      "missing_count": 2764,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__planned_maintenance_type",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "planned_maintenance_type",
+      "dtype": "string",
+      "missing_count": 3019,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__valves_closed",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "valves_closed",
+      "dtype": "string",
+      "missing_count": 3017,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__valves_opened",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "valves_opened",
+      "dtype": "string",
+      "missing_count": 3018,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__hydrants_called_out",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "hydrants_called_out",
+      "dtype": "string",
+      "missing_count": 2969,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__hydrants_called_back_in",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "hydrants_called_back_in",
+      "dtype": "string",
+      "missing_count": 2980,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__break_category",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "break_category",
+      "dtype": "string",
+      "missing_count": 317,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__road_segment_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "road_segment_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__closest_civic_number",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "closest_civic_number",
+      "dtype": "string",
+      "missing_count": 92,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__street",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "street",
+      "dtype": "string",
+      "missing_count": 10,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__related_asset_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "related_asset_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__asset_depth_m",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "asset_depth_m",
+      "dtype": "Float64",
+      "missing_count": 3005,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__frost_depth_m",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "frost_depth_m",
+      "dtype": "Float64",
+      "missing_count": 2938,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__asset_size_reported",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "asset_size_reported",
+      "dtype": "Float64",
+      "missing_count": 323,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__reported_installation_year",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "reported_installation_year",
+      "dtype": "Float64",
+      "missing_count": 327,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__asset_material",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "asset_material",
+      "dtype": "string",
+      "missing_count": 323,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__asset_exists",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "asset_exists",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__global_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "global_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__update_by",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "update_by",
+      "dtype": "string",
+      "missing_count": 573,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__update_date",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "update_date",
+      "dtype": "datetime64[us]",
+      "missing_count": 573,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__x",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "x",
+      "dtype": "Float64",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw__y",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "raw_audit_only"
+    },
+    {
+      "field": "y",
+      "dtype": "Float64",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "invalid_primary_key",
+      "dtype": "bool",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "eligible_event",
+      "dtype": "bool[pyarrow]",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "matched_asset",
+      "dtype": "bool",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "ambiguous_asset",
+      "dtype": "bool",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "unmatched_asset",
+      "dtype": "bool",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "placeholder_related_asset_id",
+      "dtype": "bool[pyarrow]",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "matched_installation_date",
+      "dtype": "datetime64[us]",
+      "missing_count": 589,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "event_before_install",
+      "dtype": "bool",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "reliable_event",
+      "dtype": "bool[pyarrow]",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "event_disposition",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "incident_day",
+      "dtype": "datetime64[us]",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "same_pipe_day_event_count",
+      "dtype": "int64",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "same_pipe_day_multiple_events",
+      "dtype": "bool",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "eligible_same_pipe_day_event_count",
+      "dtype": "int64",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "eligible_same_pipe_day_multiple_events",
+      "dtype": "bool",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    }
+  ],
+  "data_quality_issues": [
+    {
+      "field": "issue_id",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "table",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "source_file",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "source_row_number",
+      "dtype": "int64",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "record_id",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "asset_id",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "field",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "issue_code",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "severity",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "raw_value",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "reason",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "action",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    }
+  ],
+  "pipe_risk_features": [
+    {
+      "field": "asset_id",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "as_of_date",
+      "dtype": "datetime64[us]",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    },
+    {
+      "field": "age_years",
+      "dtype": "float64",
+      "missing_count": 0,
+      "role": "model_input"
+    },
+    {
+      "field": "material",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "model_input"
+    },
+    {
+      "field": "pipe_size",
+      "dtype": "Float64",
+      "missing_count": 9,
+      "role": "model_input"
+    },
+    {
+      "field": "length_m",
+      "dtype": "Float64",
+      "missing_count": 0,
+      "role": "model_input"
+    },
+    {
+      "field": "pressure_zone",
+      "dtype": "string",
+      "missing_count": 0,
+      "role": "model_input"
+    },
+    {
+      "field": "past_break_count",
+      "dtype": "int64",
+      "missing_count": 0,
+      "role": "model_input"
+    },
+    {
+      "field": "breaks_last_3y",
+      "dtype": "int64",
+      "missing_count": 0,
+      "role": "model_input"
+    },
+    {
+      "field": "years_since_last_break",
+      "dtype": "float64",
+      "missing_count": 150345,
+      "role": "model_input"
+    },
+    {
+      "field": "had_prior_break",
+      "dtype": "int8",
+      "missing_count": 0,
+      "role": "model_input"
+    },
+    {
+      "field": "break_next_12m",
+      "dtype": "int8",
+      "missing_count": 0,
+      "role": "target_not_input"
+    },
+    {
+      "field": "split",
+      "dtype": "str",
+      "missing_count": 0,
+      "role": "identifier_or_audit"
+    }
+  ]
+}

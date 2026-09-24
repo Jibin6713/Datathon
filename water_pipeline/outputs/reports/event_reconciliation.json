@@ -1,0 +1,17 @@
+{
+  "assets": 16214,
+  "events": 3020,
+  "eligible_main_completed": 2925,
+  "eligible_matched": 2417,
+  "eligible_unmatched": 508,
+  "eligible_ambiguous": 0,
+  "eligible_event_before_install": 325,
+  "reliable_events": 2092,
+  "dispositions": {
+    "event_before_install": 325,
+    "not_main": 76,
+    "reliable_event": 2092,
+    "repair_not_completed": 19,
+    "unmatched_asset": 508
+  }
+}
