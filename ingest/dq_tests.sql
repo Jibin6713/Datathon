@@ -3,7 +3,6 @@
 -- Convention: every test SELECTs the rows that FAIL.
 --   0 rows returned  = PASS
 --   any rows         = FAIL (severity: error) or WARNING (severity: warn)
--- AWS CodeBuild runs each block and fails the build on any error test.
 -- =====================================================================
 
 USE DATABASE LEAK_DB;

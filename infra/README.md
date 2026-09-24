@@ -1,20 +1,22 @@
 # Platform: Snowflake setup, Terraform, CI/CD and cost monitoring
 
-This folder builds the Snowflake platform everything else runs on. It covers four judging criteria:
+This folder builds the Snowflake platform everything else runs on.
 
-| Criterion | Where |
+**Status:** the platform is live and in use by the team. Terraform has adopted it, and `terraform plan` reports **No changes**, so the code matches the live account. CI checks every pull request, and `main` is branch-protected.
+
+| What | Where |
 |---|---|
 | IaC + release process | `terraform/` + `.github/workflows/terraform.yml` |
 | RBAC (objects → database roles → account roles) | `bootstrap/00_hour0_setup.sql`, `terraform/rbac.tf` |
 | Warehouse optimisation | `terraform/compute_and_cost.tf` |
 | Monitoring (resource monitor, cost views, alerts) | `terraform/compute_and_cost.tf`, `sql/` |
 
-## How it's built: by hand first, then Terraform
+## How it was built: by hand first, then Terraform
 
-1. **Hour 0: unblock the team.** Run `bootstrap/00_hour0_setup.sql` by hand (about 15 minutes). Everyone can start working straight away.
-2. **Later in the day: codify it.** Terraform *adopts* (imports) exactly what the script created, with the same names. From then on, platform changes go through Terraform.
+1. **Hour 0: unblock the team.** `bootstrap/00_hour0_setup.sql` was run by hand in about 15 minutes, so everyone could start working straight away.
+2. **Then: codify it.** Terraform *adopted* (imported) exactly what the script created, with the same names. Since then, platform changes go through Terraform.
 
-This is how many real teams adopt infrastructure as code, and it makes a good demo moment ("we set up by hand to unblock the team, then codified the live platform").
+This is how many real teams adopt infrastructure as code: set up by hand to unblock the team, then codify the live platform.
 
 **Names are fixed once the script has run.** `terraform/locals.tf` copies them from the script, and the tests check they match.
 
@@ -60,7 +62,9 @@ flowchart LR
 
 ---
 
-## Part A: hour-0 setup (Jibin, about 15 minutes)
+## Part A: hour-0 setup (done)
+
+Steps to reproduce on a new account:
 
 1. **Snowflake trial account**: **Enterprise** edition, **AWS**, **Asia Pacific (Sydney)**. Add a credit card (Admin → Billing): trials have AI features switched off until you do, but you still use the free credits.
 2. **Verify your email** (profile menu → email). Credit-limit warnings only go to verified addresses.
@@ -83,11 +87,14 @@ flowchart LR
 |---|---|---|
 | `Actual statement count N did not match the desired statement count 1` | Multi-statement mode is off, or a comment contains an apostrophe | Run the `ALTER SESSION SET MULTI_STATEMENT_COUNT = 0;` line first; keep apostrophes out of comments |
 | `No active warehouse selected in the current session` | Run All started before `LEAK_WH` existed | Do Step 1 first (ends with `USE WAREHOUSE LEAK_WH;`) |
-| `Unsupported feature GRANT/REVOKE CREATE NOTEBOOK ON SCHEMA` | This account does not support that permission at all | Already fixed: the script no longer grants it |
+| `Unsupported feature GRANT/REVOKE CREATE NOTEBOOK ON SCHEMA` | This account does not support that permission at all | Fixed: the script no longer grants it |
+| `User 'JJOY283' does not exist or not authorized` | Trial sign-up usernames are lower case; unquoted names are upper-cased by Snowflake | Fixed: the script quotes the name (`SET me = '"' \|\| CURRENT_USER() \|\| '"'`) |
 
 ---
 
-## Part B: bring it under Terraform (Jibin, later in the day)
+## Part B: bring it under Terraform (done)
+
+Steps to reproduce:
 
 ### 1. Install tools
 
@@ -130,6 +137,8 @@ What a good first plan looks like:
 
 The database and schemas also have `prevent_destroy`, so Terraform refuses to delete them even by mistake.
 
+**What happened on our first plan:** it wanted to destroy and recreate all four schemas, because the provider's default for `is_transient` did not match what Snowflake reported. `prevent_destroy` blocked it. Pinning `is_transient = "false"` in `database.tf` fixed it, and the plan then matched this table.
+
 ### 5. Apply
 
 ```bash
@@ -170,11 +179,11 @@ Ask teammates to set a query tag, for example:
 
 `terraform fmt -check` → `validate` → `terraform test` (mocked provider, no secrets needed).
 
-Protect `main` in **Settings → Branches** (require a PR and the `fmt / validate / test` check) so broken Terraform can't be merged.
+`main` is branch-protected: changes need a pull request, so broken Terraform can't be merged.
 
 ---
 
-## Next steps (for the roadmap slide)
+## Next steps
 
 - **DEV/PROD split**: a second database with its own roles, with CI deploying merged code to PROD.
 - **Remote state in S3** + GitHub OIDC, so CI runs `plan` on PRs and `apply` on merge.
