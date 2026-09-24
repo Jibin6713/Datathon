@@ -1,0 +1,31 @@
+# Copy to terraform.tfvars (git-ignored) and fill in.
+#   cp terraform.tfvars.example terraform.tfvars
+
+# From: SELECT CURRENT_ORGANIZATION_NAME(), CURRENT_ACCOUNT_NAME();
+snowflake_organization_name = "ABCDEFG"
+snowflake_account_name      = "XY12345"
+
+# Private key for TF_ADMIN (created in infra/bootstrap). Keep it OUTSIDE the repo.
+snowflake_private_key_path = "~/.snowflake/tf_admin.p8"
+
+# true = adopt what infra/bootstrap/00_hour0_setup.sql created (the normal case).
+adopt_existing = true
+
+# Your own Snowflake user (the trial owner), so it keeps LEAK_ADMIN.
+# Find it with: SELECT CURRENT_USER();  Copy it EXACTLY, including lower case
+# (trial sign-up names are often lower case, e.g. "jjoy283").
+trial_owner_user = "jjoy283"
+
+# Teammates. Names, roles and namespaces MUST match section 6 of the hour-0 script.
+# Use the same emails you typed into the worksheet (otherwise Terraform just updates them).
+#   role = ADMIN | ENGINEER | ANALYST
+team_users = {
+  KHALID = { email = "khalid@example.com", first_name = "Khalid", role = "ADMIN", default_namespace = "LEAK_DB" }
+  WAYNE  = { email = "wayne@example.com", first_name = "Wayne", role = "ENGINEER", default_namespace = "LEAK_DB.RAW" }
+  ARITHA = { email = "aritha@example.com", first_name = "Aritha", role = "ENGINEER", default_namespace = "LEAK_DB.CURATED" }
+  SUN    = { email = "sun@example.com", first_name = "Sun", role = "ENGINEER", default_namespace = "LEAK_DB.CURATED" }
+  KARLO  = { email = "karlo@example.com", first_name = "Karlo", role = "ANALYST", default_namespace = "LEAK_DB.CURATED" }
+}
+
+# Only used if Terraform CREATES a new user later (existing users keep their passwords).
+# initial_password = "..."

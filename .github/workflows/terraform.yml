@@ -1,0 +1,51 @@
+# Terraform CI
+#
+# Every PR / push touching infra/terraform -> format check, validate, unit tests.
+# The tests use a mocked provider, so no Snowflake account or secrets are needed.
+#
+# Deploying is done from one laptop (`terraform apply`) because state is local.
+# Next step after the hackathon: S3 state backend + plan on PR / apply on main.
+
+name: terraform
+
+on:
+  pull_request:
+    paths:
+      - "infra/terraform/**"
+      - ".github/workflows/terraform.yml"
+  push:
+    branches: [main]
+    paths:
+      - "infra/terraform/**"
+      - ".github/workflows/terraform.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: infra/terraform
+
+jobs:
+  checks:
+    name: fmt / validate / test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+
+      - name: Format check
+        run: terraform fmt -check -recursive
+
+      - name: Init (no backend)
+        run: terraform init -backend=false -input=false
+
+      - name: Validate
+        run: terraform validate
+
+      - name: Unit tests (mocked provider)
+        run: terraform test
