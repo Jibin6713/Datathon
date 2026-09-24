@@ -1,0 +1,51 @@
+# ---- Terraform ----
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+# Real variable files hold account names, emails and passwords - never commit them.
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# ---- Keys and secrets ----
+*.p8
+*.pem
+*.key
+*.pub
+.env
+.env.*
+config.toml
+connections.toml
+
+# ---- dbt ----
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+profiles.yml
+
+# ---- Python ----
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- Data files (download locally, load to Snowflake; don't commit) ----
+data/raw/
+*.geojson
+*.parquet
+
+# ---- OS / editor ----
+.DS_Store
+.idea/
+.vscode/

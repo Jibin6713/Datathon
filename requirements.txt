@@ -1,0 +1,31 @@
+# Shared Python environment for LOCAL work (dbt, scripts, notebooks on your laptop).
+# Not needed for work done inside Snowsight.
+#
+# Python 3.11. Set up once (keep .venv OUT of OneDrive folders):
+#   python -m venv .venv
+#   .venv\Scripts\activate          (Mac/Linux: source .venv/bin/activate)
+#   pip install -r requirements.txt
+#
+# Versions are pinned and were checked to install together on Python 3.11 / Windows.
+# Add a package? Pin it here and commit, so everyone gets the same version.
+
+# Snowflake
+snowflake-connector-python[pandas]==4.7.5
+snowflake-snowpark-python[pandas]==1.55.0
+snowflake-ml-python==2.1.0
+
+# Transformations
+dbt-core==1.12.0
+dbt-snowflake==1.12.1
+
+# Data + ML
+pandas==2.3.3
+numpy==2.4.6
+scikit-learn==1.9.1
+xgboost==2.0.3          # held at 2.0.x by snowflake-ml-python
+
+# Dashboard (local preview; the deployed app runs in Streamlit in Snowflake)
+streamlit==1.64.0
+
+# Snowflake CLI (snow) is installed SEPARATELY to avoid dependency clashes:
+#   pip install pipx && pipx install snowflake-cli
